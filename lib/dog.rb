@@ -31,7 +31,7 @@ class Dog
 
 
   def save
-    if self.id 
+    if self.id
       self.update
     else
       sql = <<-SQL
@@ -49,6 +49,6 @@ class Dog
     SQL
     DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
-  
+
 
 end
